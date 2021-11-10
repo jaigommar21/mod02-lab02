@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * { /* Selecciona todos los objetos */
+            border: 1px solid blue;
+        }
+        p { /* Selecciona por etiqueta (todos los párrafos) */
+            background-color: aquamarine;
+        }
+        .color-red { /* Selecciona por clase (aplica a varios) */
+            background-color: red;
+        }
+        
+        .texto-subbrayado{  /* Selecciona por clase */
+            text-decoration: underline;
+        }
+        
+        #p2 { /* Selecciona por id (aplica solo a uno) */
+            background-color: limegreen;
+        }
+        
+        .dark{
+            background-color: black !important; /* Predomina ante todo */
+            color: white;
+        }
+        
+        .parrafo1{
+            background-color: green;
+        }
+        
+        .enfasis{
+            font-family: arial;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        #p2.parrafo1.enfasis{   /* Aplica si tiene id=#p2, class=parrafo1 y class=enfasis */
+            color: red;
+            background-color: inherit !important;   /* Hacer que predomine la herencia */
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p id="p1" class="parrafo1">
+             Mensaje1  
+        </p>
+        <p id="p2" class="dark parrafo1 enfasis">
+             Mensaje2
+        </p>
+        <p id="p3" class="parrafo1">
+         	Mensaje 3    
+        </p>
+    </div>
+    
+    <p class="dark enfasis">
+		Mensaje 4
+    </p>
+    
+    <button class="dark">Clickme</button>
+
+</body>
+</html>
